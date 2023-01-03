@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  .col
+    form(action='/htmltojson' method='post')
+      .mb-3
+        label.form-label HTML content
+        textarea.form-control(name="htmldata" rows="30")= htmlData
+      .mb-3
+        button.float-end.btn.btn-block.btn-success(type='submit') Export to JSON
+  .col
+    .mb-3
+      label.form-label JSON Output
+      textarea.form-control(readonly="readonly" rows=30)= output
