@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=html-to-json:* nodemon ./bin/www"
+    "start": "DEBUG=html-to-json:* node ./bin/www",
+    "dev": "DEBUG=html-to-json:* nodemon ./bin/www"
   },
   "dependencies": {
     "bootstrap": "^5.3.0-alpha1",
