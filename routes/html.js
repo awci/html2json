@@ -15,6 +15,9 @@ router.post('/', function(req, res, next) {
       const children = $(el).children();
       if (children.length)
         element.children = getChilds(children);
+      if ( !element.id ) {
+        element.id = `${el.name}-${indx}`
+      }
       data.push(element);
     })
     return data;
